@@ -1,0 +1,13 @@
+
+
+{
+    // Give the container a name
+    "name": "Container Testing",
+
+    // Use prebuilt python 3.10 image
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+
+    // Run commands after the container is created
+    "postCreateCommand": "python -m pip install numpy"
+
+}
