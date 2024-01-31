@@ -1,5 +1,7 @@
 # File to test contents of the container environment
 
+# devcontainers guide: https://containers.dev/
+
 # This assumes VSCode is installed with the dev containers extension installed:
 #   - go to left sidebar in VSCode
 #   - click on "extensions" and search "Dev Containers"

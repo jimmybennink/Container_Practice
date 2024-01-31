@@ -4,10 +4,27 @@
     // Give the container a name
     "name": "Container Testing",
 
-    // Use prebuilt python 3.10 image
-    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+    // Prebuilt python image
+    "build": {"dockerfile": "Dockerfile"},
 
-    // Run commands after the container is created
-    "postCreateCommand": "python -m pip install numpy"
+    // IDE customization
+    "customizations": {
 
+        // properties specific to vscode
+        "vscode": {
+            "settings": {}, // This is intentionally blank
+            // To add extensions, search for them in the left sidebar, right click on the one you want, click "add to devcontainer.json"
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "GitHub.vscode-pull-request-github",
+                "dbaeumer.vscode-eslint"
+            ]
+
+        }
+    },
+
+    // Temporary until matlab is phased out
+    "postCreateCommand": "python -m pip install matlabengine==9.13.1"
 }
