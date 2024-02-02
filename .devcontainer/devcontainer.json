@@ -5,26 +5,29 @@
     "name": "Container Testing",
 
     // Prebuilt python image
-    "build": {"dockerfile": "Dockerfile"},
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
 
     // IDE customization
     "customizations": {
 
         // properties specific to vscode
         "vscode": {
-            "settings": {}, // This is intentionally blank
+            // // Set the interpreter to work with python 3.10
+            "settings": {"python.defaultInterpreterPath": "/usr/local/bin/python",
+                         "python.pythonPath": "/usr/local/bin/python"},
             // To add extensions, search for them in the left sidebar, right click on the one you want, click "add to devcontainer.json"
             "extensions": [
-                "ms-azuretools.vscode-docker",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "GitHub.vscode-pull-request-github",
-                "dbaeumer.vscode-eslint"
+                "dbaeumer.vscode-eslint",
+                "streetsidesoftware.code-spell-checker",
+                "ms-python.debugpy"
             ]
 
         }
     },
 
     // Temporary until matlab is phased out
-    "postCreateCommand": "python -m pip install matlabengine==9.13.1"
+    "postCreateCommand": "bash install-dependencies.sh"
 }

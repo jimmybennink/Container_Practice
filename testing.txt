@@ -1,0 +1,10 @@
+--upgrade pip
+numpy
+scipy
+matplotlib
+msgpack-rpc-python
+pandas
+keyboard
+
+matlabengine==9.13.1
+airsim

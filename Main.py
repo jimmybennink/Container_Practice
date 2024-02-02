@@ -22,7 +22,7 @@ import airsim
 from pandas import read_csv
 import socket  # Communicating with Matlab / Simulink
 import struct  # Packing / unpacking datalink messages
-import matlab.engine  # Interfacing with Matlab / Simulink
+# import matlab.engine  # Interfacing with Matlab / Simulink
 from threading import (
     Thread,
     Event,
